@@ -1,0 +1,18 @@
+[
+    {
+        "link":"/MetodoFrances",
+        "title":"Método de Análisis Francés"
+    },
+    {
+        "link":"/MetodoAleman",
+        "title":"Metodo de Análisis Alemán"
+    },
+    {
+        "link":"/MetodoIngles",
+        "title":"Metodo de Análisis Inglés"
+    },
+    {
+        "link":"/MetodoFlat",
+        "title":"Metodo de Análisis Flat"
+    }
+]
