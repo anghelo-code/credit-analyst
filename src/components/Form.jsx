@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState } from "react";
+import PropTypes from "prop-types";
 
 export const Form = ({ onNewData }) => {
 
@@ -15,27 +16,27 @@ export const Form = ({ onNewData }) => {
     e.preventDefault();
     onNewData(form);
     e.target.reset();
-    e.target[1].value = 5;  
     setForm({ 'interes': 5})  
   }
 
   return (
 
-    <form onSubmit={ handleSubmit }>
+    <form onSubmit={ handleSubmit } aria-label='form'>
       <label htmlFor="prestamo">Préstamo inicial:</label>
       <input 
         type='number' 
-        id="prestamo" 
+        data-testid="prestamo" 
         name='prestamo' 
         min="1000" 
         max="100000" 
+        defaultValue={5}
         onChange={handleChange}
       />
 
       <label htmlFor="interes">Interés: </label>
       <input 
         type='number' 
-        id='interes' 
+        data-testid='interes' 
         name='interes'  
         min="0" 
         max="20"  
@@ -45,7 +46,7 @@ export const Form = ({ onNewData }) => {
       <label htmlFor="periodo">Número de periodos:</label>
       <input 
         type='number' 
-        id='periodo' 
+        data-testid='periodo' 
         name='periodo' 
         min="3" 
         max="36" 
@@ -57,3 +58,7 @@ export const Form = ({ onNewData }) => {
     </form>
   )
 }
+
+Form.propTypes = {
+  onNewData: PropTypes.func.isRequired
+};

@@ -4,8 +4,6 @@ import Nombres from './data/Nombres.json';
 
 export const Analizador = () => {
 
-
-
   return (
     <> 
       <h2>Analizador de Créditos</h2>

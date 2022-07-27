@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export const Button = ({link, title}) => {
   return (
@@ -6,4 +7,8 @@ export const Button = ({link, title}) => {
         <h4> { title } </h4>
     </Link>
   )
+}
+
+Button.propTypes = {
+  link: PropTypes.string.isRequired
 }

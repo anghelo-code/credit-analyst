@@ -1,5 +1,6 @@
-import { TableBody } from "./TableBody"
-import { TableThead } from "./TableThead"
+import { TableBody } from "./TableBody";
+import { TableThead } from "./TableThead";
+import PropTypes from "prop-types";
 
 export const Table = ({ result }) => {
   return (
@@ -14,4 +15,8 @@ export const Table = ({ result }) => {
       </div>
     </div>
   )
+}
+
+Table.propTypes = {
+  result: PropTypes.array.isRequired
 }
