@@ -7,6 +7,8 @@ import englishAnalyst from './helpers/englishAnalyst';
 import flatAnalyst from './helpers/flatAnalyzer';
 import frenchAnalyst from './helpers/frenchAnalyst';
 import germanAnalyzer from './helpers/germanAnalyzer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -17,24 +19,44 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
           <Route 
             path='/MetodoFrances'  
-            element={ <MethodPage  processor={ frenchAnalyst }/>}
-            title="Método de Análisis Francés"
+            element={ 
+              <MethodPage  
+                processor={ frenchAnalyst } 
+                title="Metodo de Análisis Francés"
+              />
+            }
+            title="Metodo de Análisis Francés"
           />
 
           <Route 
             path='/MetodoAleman'  
-            element={ <MethodPage  processor={ germanAnalyzer }/>}
+            element={ 
+              <MethodPage  
+                processor={ germanAnalyzer }
+                title="Metodo de Análisis Alemán"
+              />
+            }
             title="Metodo de Análisis Alemán"
           />
 
           <Route 
             path='/MetodoIngles'  
-            element={ <MethodPage  processor={ englishAnalyst }/>}
+            element={ 
+              <MethodPage  
+                processor={ englishAnalyst }
+                title="Metodo de Análisis Inglés" 
+              />
+            }
             title="Metodo de Análisis Inglés" 
           />
           <Route 
             path='/MetodoFlat'  
-            element={ <MethodPage  processor={ flatAnalyst }/>}
+            element={ 
+              <MethodPage  
+                processor={ flatAnalyst }
+                title="Metodo de Análisis Flat"
+              />
+            }
             title="Metodo de Análisis Flat"
           />
       </Routes>

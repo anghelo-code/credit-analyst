@@ -10,13 +10,14 @@ export const MethodPage = ({title, processor}) => {
   const result = useAnalyzer(data, processor);
 
   return (
-    <>
-        <h2> { title } </h2>
+    <section className="container p-3">
+        
+        <h2 className="h2 text-center"> { title } </h2>
 
         <Form onNewData={setData}/>
 
         <Table result={ result }/>
-    </>
+    </section>
   )
 }
 
